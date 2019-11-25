@@ -5,17 +5,23 @@ let grid = [" ", " ", " ",
 let turn = 0;
 const players = ["O", "X"];
 
+let player = document.querySelector("p.Turn");
+player.textContent = "It is Player 1's turn";
+
+
 //Switch players
 function switchPlayer() {
 
   if (turn == 0) {
 
     turn = 1;
+    player.textContent = "It is Player 1's turn";
     return turn;
 
   } else {
 
     turn = 0;
+    player.textContent = "It is Player 2's turn";
     return turn;
 
   }
@@ -24,7 +30,9 @@ function switchPlayer() {
 
 //Position 1
 let box1 = document.querySelector("th.Position1");
-box1.addEventListener("click", event => {
+box1.addEventListener("click", position1);
+
+function position1() {
   if (turn == 1) {
 
     box1.textContent = "X";
@@ -38,11 +46,15 @@ box1.addEventListener("click", event => {
   }
 
   switchPlayer();
-});
+  box1.removeEventListener("click", position1);
+
+}
 
 //Position 2
 let box2 = document.querySelector("th.Position2");
-box2.addEventListener("click", event => {
+box2.addEventListener("click", position2)
+
+function position2() {
   if (turn == 1) {
 
     box2.textContent = "X";
@@ -54,6 +66,7 @@ box2.addEventListener("click", event => {
     grid[1] = "O";
 
   }
+  box2.removeEventListener("click", position2);
 
   switchPlayer();
-});
+}
