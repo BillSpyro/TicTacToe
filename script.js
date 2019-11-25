@@ -8,6 +8,9 @@ const players = ["O", "X"];
 let player = document.querySelector("p.Turn");
 player.textContent = "It is Player 1's turn";
 
+let check = document.querySelector("p.Winner");
+check.textContent = "Not finished";
+
 
 //Switch players
 function switchPlayer() {
@@ -15,18 +18,39 @@ function switchPlayer() {
   if (turn == 0) {
 
     turn = 1;
-    player.textContent = "It is Player 1's turn";
+    player.textContent = "It is Player 2's turn";
     return turn;
 
   } else {
 
     turn = 0;
-    player.textContent = "It is Player 2's turn";
+    player.textContent = "It is Player 1's turn";
     return turn;
 
   }
 
 }
+
+function outcome() {
+
+  if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
+
+    check.textContent = "Player 1 is the winner";
+
+  }
+
+  if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
+
+    check.textContent = "Player 2 is the winner";
+    
+  }
+}
+
+
+
+
+
+
 
 //Position 1
 let box1 = document.querySelector("th.Position1");
@@ -47,6 +71,7 @@ function position1() {
 
   switchPlayer();
   box1.removeEventListener("click", position1);
+  outcome();
 
 }
 
@@ -69,6 +94,8 @@ function position2() {
 
   switchPlayer();
   box2.removeEventListener("click", position2);
+  outcome();
+
 
 }
 
@@ -91,6 +118,8 @@ function position3() {
 
   switchPlayer();
   box3.removeEventListener("click", position3);
+  outcome();
+
 
 }
 
@@ -113,6 +142,7 @@ function position4() {
 
   switchPlayer();
   box4.removeEventListener("click", position4);
+  outcome();
 
 }
 
@@ -135,6 +165,7 @@ function position5() {
 
   switchPlayer();
   box5.removeEventListener("click", position5);
+  outcome();
 
 }
 
@@ -157,6 +188,7 @@ function position6() {
 
   switchPlayer();
   box6.removeEventListener("click", position6);
+  outcome();
 
 }
 
@@ -179,6 +211,7 @@ function position7() {
 
   switchPlayer();
   box7.removeEventListener("click", position7);
+  outcome();
 
 }
 
@@ -201,6 +234,7 @@ function position8() {
 
   switchPlayer();
   box8.removeEventListener("click", position8);
+  outcome();
 
 }
 
@@ -223,5 +257,6 @@ function position9() {
 
   switchPlayer();
   box9.removeEventListener("click", position9);
+  outcome();
 
 }
