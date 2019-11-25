@@ -42,7 +42,7 @@ function outcome() {
   if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
 
     check.textContent = "Player 2 is the winner";
-    
+
   }
 }
 
@@ -59,13 +59,13 @@ box1.addEventListener("click", position1);
 function position1() {
   if (turn == 1) {
 
-    box1.textContent = "X";
-    grid[0] = "X";
+    box1.textContent = players[1];
+    grid[0] = players[1];
 
   } else {
 
-    box1.textContent = "O";
-    grid[0] = "O";
+    box1.textContent = players[0];
+    grid[0] = players[0];
 
   }
 
@@ -82,13 +82,13 @@ box2.addEventListener("click", position2)
 function position2() {
   if (turn == 1) {
 
-    box2.textContent = "X";
-    grid[1] = "X";
+    box2.textContent = players[1];
+    grid[1] = players[1];
 
   } else {
 
-    box2.textContent = "O";
-    grid[1] = "O";
+    box2.textContent = players[0];
+    grid[1] = players[0];
 
   }
 
@@ -106,13 +106,13 @@ box3.addEventListener("click", position3);
 function position3() {
   if (turn == 1) {
 
-    box3.textContent = "X";
-    grid[2] = "X";
+    box3.textContent = players[1];
+    grid[2] = players[1];
 
   } else {
 
-    box3.textContent = "O";
-    grid[2] = "O";
+    box3.textContent = players[0];
+    grid[2] = players[0];
 
   }
 
@@ -130,13 +130,13 @@ box4.addEventListener("click", position4);
 function position4() {
   if (turn == 1) {
 
-    box4.textContent = "X";
-    grid[3] = "X";
+    box4.textContent = players[1];
+    grid[3] = players[1];
 
   } else {
 
-    box4.textContent = "O";
-    grid[3] = "O";
+    box4.textContent = players[0];
+    grid[3] = players[0];
 
   }
 
@@ -153,13 +153,13 @@ box5.addEventListener("click", position5);
 function position5() {
   if (turn == 1) {
 
-    box5.textContent = "X";
-    grid[4] = "X";
+    box5.textContent = players[1];
+    grid[4] = players[1];
 
   } else {
 
-    box5.textContent = "O";
-    grid[4] = "O";
+    box5.textContent = players[0];
+    grid[4] = players[0];
 
   }
 
@@ -176,13 +176,13 @@ box6.addEventListener("click", position6);
 function position6() {
   if (turn == 1) {
 
-    box6.textContent = "X";
-    grid[5] = "X";
+    box6.textContent = players[1];
+    grid[5] = players[1];
 
   } else {
 
-    box6.textContent = "O";
-    grid[5] = "O";
+    box6.textContent = players[0];
+    grid[5] = players[0];
 
   }
 
@@ -199,13 +199,13 @@ box7.addEventListener("click", position7);
 function position7() {
   if (turn == 1) {
 
-    box7.textContent = "X";
-    grid[6] = "X";
+    box7.textContent = players[1];
+    grid[6] = players[1];
 
   } else {
 
-    box7.textContent = "O";
-    grid[6] = "O";
+    box7.textContent = players[0];
+    grid[6] = players[0];
 
   }
 
@@ -222,13 +222,13 @@ box8.addEventListener("click", position8);
 function position8() {
   if (turn == 1) {
 
-    box8.textContent = "X";
-    grid[7] = "X";
+    box8.textContent = players[1];
+    grid[7] = players[1];
 
   } else {
 
-    box8.textContent = "O";
-    grid[7] = "O";
+    box8.textContent = players[0];
+    grid[7] = players[0];
 
   }
 
@@ -245,13 +245,13 @@ box9.addEventListener("click", position9);
 function position9() {
   if (turn == 1) {
 
-    box9.textContent = "X";
-    grid[8] = "X";
+    box9.textContent = players[1];
+    grid[8] = players[1];
 
   } else {
 
-    box9.textContent = "O";
-    grid[8] = "O";
+    box9.textContent = players[0];
+    grid[8] = players[0];
 
   }
 
