@@ -23,19 +23,37 @@ function switchPlayer() {
 }
 
 //Position 1
-let square = document.querySelector("th.Position1");
-square.addEventListener("click", event => {
+let box1 = document.querySelector("th.Position1");
+box1.addEventListener("click", event => {
   if (turn == 1) {
 
-    square.textContent = "X";
+    box1.textContent = "X";
     grid[0] = "X";
 
   } else {
 
-    square.textContent = "O";
+    box1.textContent = "O";
     grid[0] = "O";
 
   }
 
-  switchPlayer;
+  switchPlayer();
+});
+
+//Position 2
+let box2 = document.querySelector("th.Position2");
+box2.addEventListener("click", event => {
+  if (turn == 1) {
+
+    box2.textContent = "X";
+    grid[1] = "X";
+
+  } else {
+
+    box2.textContent = "O";
+    grid[1] = "O";
+
+  }
+
+  switchPlayer();
 });
