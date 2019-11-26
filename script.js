@@ -31,23 +31,25 @@ function ticTacToe() {
 
   }
 
+  //Calculates Player 1's Score
   let player1Score = document.querySelector("th.Player1Score");
-  let score1 = player1Score.textContent;
 
   function player1Scores() {
 
-    score1 = Number(score1) + 1;
-    player1Score.textContent = score1;
+    let score = player1Score.textContent;
+    score = Number(score) + 1;
+    player1Score.textContent = score;
 
   }
 
+  //Calculates Player 2's Score
   let player2Score = document.querySelector("th.Player2Score");
-  let score2 = player2Score.textContent;
 
   function player2Scores() {
 
-    score2 = Number(score2) + 1;
-    player2Score.textContent = score2;
+    let score = player2Score.textContent;
+    score = Number(score) + 1;
+    player2Score.textContent = score;
 
   }
 
@@ -59,8 +61,6 @@ function ticTacToe() {
 
     player1Score.textContent = "0";
     player2Score.textContent = "0";
-    score1 = 0;
-    score2 = 0;
 
   }
 
@@ -136,17 +136,17 @@ function ticTacToe() {
     //Top Row
     if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
 
-      player1Scores();
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
     if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
 
-      player2Scores();
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
