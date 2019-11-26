@@ -31,9 +31,42 @@ function ticTacToe() {
 
   }
 
+  let player1Score = document.querySelector("th.Player1Score");
+  let score1 = player1Score.textContent;
+
+  function player1Scores() {
+
+    score1 = Number(score1) + 1;
+    player1Score.textContent = score1;
+
+  }
+
+  let player2Score = document.querySelector("th.Player2Score");
+  let score2 = player2Score.textContent;
+
+  function player2Scores() {
+
+    score2 = Number(score2) + 1;
+    player2Score.textContent = score2;
+
+  }
+
+  //Reset the score
+  let resetScoreButton = document.querySelector("button.ResetScore");
+  resetScoreButton.addEventListener("click", resetScore);
+
+  function resetScore() {
+
+    player1Score.textContent = "0";
+    player2Score.textContent = "0";
+    score1 = 0;
+    score2 = 0;
+
+  }
+
   //Reset the game
-  let reset = document.querySelector("button.Reset");
-  reset.addEventListener("click", resetGame)
+  let resetGameButton = document.querySelector("button.ResetGame");
+  resetGameButton.addEventListener("click", resetGame)
 
   function resetGame() {
 
@@ -103,6 +136,7 @@ function ticTacToe() {
     //Top Row
     if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
 
+      player1Scores();
       check.textContent = "Player 1 is the winner";
       endGame();
 
@@ -110,6 +144,7 @@ function ticTacToe() {
 
     if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
 
+      player2Scores();
       check.textContent = "Player 2 is the winner";
       endGame();
 
@@ -120,6 +155,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -127,6 +163,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -135,6 +172,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -142,6 +180,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -150,6 +189,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -157,6 +197,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -165,6 +206,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -172,6 +214,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -180,6 +223,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -187,6 +231,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -195,6 +240,8 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
+
 
     }
 
@@ -202,6 +249,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
@@ -210,6 +258,7 @@ function ticTacToe() {
 
       check.textContent = "Player 1 is the winner";
       endGame();
+      player1Scores();
 
     }
 
@@ -217,6 +266,7 @@ function ticTacToe() {
 
       check.textContent = "Player 2 is the winner";
       endGame();
+      player2Scores();
 
     }
 
