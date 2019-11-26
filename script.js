@@ -6,19 +6,30 @@ let turn = 0;
 const players = ["O", "X"];
 
 let player = document.querySelector("p.Turn");
-player.textContent = "It is Player 1's turn";
-
 let check = document.querySelector("p.Winner");
 
+randomPlayer();
+
 //Randomize who starts
-function randomPlayer(){
+function randomPlayer() {
+  let random = Math.floor(Math.random() * players.length);
 
+  if (random == 1) {
 
+    turn = 1;
+    player.textContent = "It is Player 2's turn";
+
+  } else {
+
+    turn = 0;
+    player.textContent = "It is Player 1's turn";
+
+  }
 
 }
 
 //Reset the game
-function resetGame(){
+function resetGame() {
 
 
 
