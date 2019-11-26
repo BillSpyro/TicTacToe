@@ -9,7 +9,6 @@ let player = document.querySelector("p.Turn");
 player.textContent = "It is Player 1's turn";
 
 let check = document.querySelector("p.Winner");
-check.textContent = "Not finished";
 
 
 //Switch players
@@ -31,26 +30,151 @@ function switchPlayer() {
 
 }
 
-function outcome() {
+function endGame() {
 
-  if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
+  box1.removeEventListener("click", position1);
+  box2.removeEventListener("click", position2);
+  box3.removeEventListener("click", position3);
+  box4.removeEventListener("click", position4);
+  box5.removeEventListener("click", position5);
+  box6.removeEventListener("click", position6);
+  box7.removeEventListener("click", position7);
+  box8.removeEventListener("click", position8);
+  box9.removeEventListener("click", position9);
 
-    check.textContent = "Player 1 is the winner";
-
-  }
-
-  if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
-
-    check.textContent = "Player 2 is the winner";
-
-  }
 }
 
+function outcome() {
 
+    //Top Row
+    if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
 
+      check.textContent = "Player 1 is the winner";
+      endGame();
 
+    }
 
+    if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
 
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Middle Row
+    if (grid[3] == players[0] && grid[4] == players[0] && grid[5] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[3] == players[1] && grid[4] == players[1] && grid[5] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Bottom Row
+    if (grid[6] == players[0] && grid[7] == players[0] && grid[8] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[6] == players[1] && grid[7] == players[1] && grid[8] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Left Column
+    if (grid[0] == players[0] && grid[3] == players[0] && grid[6] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[0] == players[1] && grid[3] == players[1] && grid[6] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Middle Column
+    if (grid[1] == players[0] && grid[4] == players[0] && grid[7] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[1] == players[1] && grid[4] == players[1] && grid[7] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Right Column
+    if (grid[2] == players[0] && grid[5] == players[0] && grid[8] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[2] == players[1] && grid[5] == players[1] && grid[8] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Left Diagonal
+    if (grid[0] == players[0] && grid[4] == players[0] && grid[8] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[0] == players[1] && grid[4] == players[1] && grid[8] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Right Diagonal
+    if (grid[2] == players[0] && grid[4] == players[0] && grid[6] == players[0]) {
+
+      check.textContent = "Player 1 is the winner";
+      endGame();
+
+    }
+
+    if (grid[2] == players[1] && grid[4] == players[1] && grid[6] == players[1]) {
+
+      check.textContent = "Player 2 is the winner";
+      endGame();
+
+    }
+
+    //Stalemate
+    if(!grid.includes(" ")){
+
+      check.textContent = "Stalemate";
+      endGame();
+
+    }
+
+}
 
 //Position 1
 let box1 = document.querySelector("th.Position1");
