@@ -10,6 +10,19 @@ player.textContent = "It is Player 1's turn";
 
 let check = document.querySelector("p.Winner");
 
+//Randomize who starts
+function randomPlayer(){
+
+
+
+}
+
+//Reset the game
+function resetGame(){
+
+
+
+}
 
 //Switch players
 function switchPlayer() {
@@ -30,6 +43,7 @@ function switchPlayer() {
 
 }
 
+//End the game
 function endGame() {
 
   box1.removeEventListener("click", position1);
@@ -44,135 +58,140 @@ function endGame() {
 
 }
 
+//Check for stalemate
+function stalemate() {
+  if (!grid.includes(" ")) {
+
+    check.textContent = "Stalemate";
+    endGame();
+
+  }
+}
+
+//Calculate the result
 function outcome() {
 
-    //Top Row
-    if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
+  stalemate();
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Top Row
+  if (grid[0] == players[0] && grid[1] == players[0] && grid[2] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[0] == players[1] && grid[1] == players[1] && grid[2] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Middle Row
-    if (grid[3] == players[0] && grid[4] == players[0] && grid[5] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Middle Row
+  if (grid[3] == players[0] && grid[4] == players[0] && grid[5] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[3] == players[1] && grid[4] == players[1] && grid[5] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[3] == players[1] && grid[4] == players[1] && grid[5] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Bottom Row
-    if (grid[6] == players[0] && grid[7] == players[0] && grid[8] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Bottom Row
+  if (grid[6] == players[0] && grid[7] == players[0] && grid[8] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[6] == players[1] && grid[7] == players[1] && grid[8] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[6] == players[1] && grid[7] == players[1] && grid[8] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Left Column
-    if (grid[0] == players[0] && grid[3] == players[0] && grid[6] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Left Column
+  if (grid[0] == players[0] && grid[3] == players[0] && grid[6] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[0] == players[1] && grid[3] == players[1] && grid[6] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[0] == players[1] && grid[3] == players[1] && grid[6] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Middle Column
-    if (grid[1] == players[0] && grid[4] == players[0] && grid[7] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Middle Column
+  if (grid[1] == players[0] && grid[4] == players[0] && grid[7] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[1] == players[1] && grid[4] == players[1] && grid[7] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[1] == players[1] && grid[4] == players[1] && grid[7] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Right Column
-    if (grid[2] == players[0] && grid[5] == players[0] && grid[8] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Right Column
+  if (grid[2] == players[0] && grid[5] == players[0] && grid[8] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[2] == players[1] && grid[5] == players[1] && grid[8] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[2] == players[1] && grid[5] == players[1] && grid[8] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Left Diagonal
-    if (grid[0] == players[0] && grid[4] == players[0] && grid[8] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Left Diagonal
+  if (grid[0] == players[0] && grid[4] == players[0] && grid[8] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[0] == players[1] && grid[4] == players[1] && grid[8] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[0] == players[1] && grid[4] == players[1] && grid[8] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Right Diagonal
-    if (grid[2] == players[0] && grid[4] == players[0] && grid[6] == players[0]) {
+  }
 
-      check.textContent = "Player 1 is the winner";
-      endGame();
+  //Right Diagonal
+  if (grid[2] == players[0] && grid[4] == players[0] && grid[6] == players[0]) {
 
-    }
+    check.textContent = "Player 1 is the winner";
+    endGame();
 
-    if (grid[2] == players[1] && grid[4] == players[1] && grid[6] == players[1]) {
+  }
 
-      check.textContent = "Player 2 is the winner";
-      endGame();
+  if (grid[2] == players[1] && grid[4] == players[1] && grid[6] == players[1]) {
 
-    }
+    check.textContent = "Player 2 is the winner";
+    endGame();
 
-    //Stalemate
-    if(!grid.includes(" ")){
-
-      check.textContent = "Stalemate";
-      endGame();
-
-    }
+  }
 
 }
 
